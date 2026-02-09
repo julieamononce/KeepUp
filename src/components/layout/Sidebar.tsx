@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
+import { ThemeToggle } from "./ThemeToggle";
 import {
   LayoutDashboard,
   BookOpen,
@@ -68,8 +69,9 @@ export function Sidebar() {
           })}
         </nav>
 
-        {/* Collapse Toggle */}
-        <div className="border-t border-sidebar-border p-3">
+        {/* Theme Toggle & Collapse */}
+        <div className="border-t border-sidebar-border p-3 space-y-1">
+          <ThemeToggle collapsed={collapsed} />
           <button
             onClick={() => setCollapsed(!collapsed)}
             className="flex w-full items-center justify-center gap-2 rounded-lg px-3 py-2 text-sm text-sidebar-foreground/70 transition-colors hover:bg-sidebar-accent/50 hover:text-sidebar-foreground"
