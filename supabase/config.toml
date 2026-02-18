@@ -1,4 +1,0 @@
-project_id = "vzvduitiqagxiumkudkg"
-
-[functions.mysql-query]
-verify_jwt = false
